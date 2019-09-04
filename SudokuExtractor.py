@@ -173,7 +173,7 @@ class SudokuExtractor:
         
         w_b = bounding_box[1][0] - bounding_box[0][0]
         h_b = bounding_box[1][1] - bounding_box[0][1]
-        if w_b > 0 and h_b > 0 and (w_b * h_b) > 100 and len(digit) > 0:
+        if w_b > 0 and h_b > 0 and (w_b * h_b) > 100 and len(digit) > 14:
             return self.centralize_digit(digit, bounding_box, [h,w])
         else:
             return np.zeros((size, size), np.uint8)
